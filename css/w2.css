@@ -1,0 +1,224 @@
+html{
+	height: 3000px;
+	//height: 100%;
+	font-family: sans-serif;
+}
+body{
+	margin: 0;
+}
+p, li, h2{
+	font-family: sans-serif;
+	font-size: 20px;
+}
+p{
+	font-size: 18px;
+	font-weight: light;
+}
+a:link {
+	display:block;
+    text-decoration: none;
+	color: inherit;
+}
+a:visited {
+    text-decoration: none;
+	color:inherit;
+}
+.nav_bar{
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	height: 50px;
+	background: white;	
+	box-shadow: 0 2px 2px #888888;
+	//line-height: 50px;
+}
+.nav_link{
+	display: block;
+	width: 130px;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 18px;
+}
+#nav_bar_ul{
+	list-style-type: none;
+	padding-right: 5%;
+	padding-top: 15px;
+}
+#nav_bar_ul li{
+	display: inline;
+	float: right;
+	font-weight: 500;
+}
+#home_link{
+	position: absolute;
+	top: 9px;
+	left: 25px;
+	width: 32px;
+	
+}
+#prlx_background{
+	position: fixed;
+	background: url('pics/waterdrop.jpg');
+	//-webkit-filter: blur(1px);
+	//filter: blur(20px);
+	background-size: cover;
+	background-repeat: repeat;
+	background-position: center;
+	margin-top: 50px;
+	width: 100%;
+	//height: 2000px;
+	height: 120%;
+	z-index: -1;
+}
+
+/* --------------------------------SPLASH-------------------------------*/
+#prlx1{
+	position: fixed;
+	margin-top: 50px;
+	background: rgba(214, 235, 255, 0.7);
+	width: 100%;
+	height: 500px;
+	-webkit-animation: change_prlx_cover_color 10s;
+	-webkit-animation-iteration-count: infinite;
+	animation: change_prlx_cover_color 15s;
+	animation-iteration-count: infinite;	
+	text-align: center;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes change_prlx_cover_color {
+    0% {background: rgba(214, 235, 255, 0.7);}
+    30% {background: rgba(133, 224, 133, 0.7);}
+	55% {background: rgba(255, 255, 133, 0.7);}	
+	80% {background: rgba(194, 153, 255, 0.7);}
+}
+/* Standard syntax */
+@keyframes change_prlx_cover_color {
+    0% {background: rgba(214, 235, 255, 0.7);}
+    30% {background: rgba(133, 224, 133, 0.7);}
+	55% {background: rgba(255, 255, 133, 0.7);}	
+	80% {background: rgba(194, 153, 255, 0.7);}
+}
+#face{
+	padding-top: 80px;
+	margin: 0 auto;
+	width:130px;	
+}
+
+.invite_button{
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+	height: 50px;
+	z-index: 1;
+	background-color: #ededed;
+	border-radius: 4px;
+	border: 2px solid #6760cc;
+	color: #6760cc;
+	font-family: arial;
+	font-size; 16px;
+}
+.invite_button:hover{
+	background-color: #6760cc;
+	color: #ededed;	
+}
+#arrow{
+	display:block;
+	padding-top: 20px;
+	margin: 0 auto;
+	//-webkit-animation: blink_arrow 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	//animation: blink_arrow 0.5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@-webkit-keyframes blink_arrow {
+	0% {opacity: 1;}
+	25% {opacity: 0;}
+	50% {opacity: 1;}
+	75% {opacity: 0;}
+}
+@keyframes blink_arrow {
+	0% {opacity: 1;}
+	25% {opacity: 0;}
+	50% {opacity: 1;}
+	75% {opacity: 0;}
+}
+
+
+/* --------------------------------ABOUTME-------------------------------*/
+#prlx2{
+	position: fixed;
+	margin-top: 800px;
+	background: rgba(255, 255, 255, 0.7);
+	width: 100%;
+	height: 600px;
+	padding-top: 50px;
+	//padding-left: 18%;
+	//padding-right: 18%;
+}
+#left_profile, #right_profile{
+	display: inline-block;
+	height: 350px;
+	width: 26%;
+	border-radius: 7px;
+	float:left;
+}
+#left_profile{
+	background: #8493CA;
+	margin-left: 18%;
+}
+#right_profile{
+	background: #ACD372;
+	margin-left: 12%;
+}
+.prof_bg_img{
+	display: block;
+	width: 128px;
+	margin: 0 auto;
+	opacity: 0.2;
+	margin-top: 100px;
+}
+.prof_content{
+	position: relative;
+	top: -190px;
+	//text-align: center;
+}
+.prof_title{
+	height: 50px;
+	background: black;
+	color: white;
+	text-align: center;
+}
+.middle{
+	text-align: center;
+}
+
+/*------------------------------CONTACT------------------------------*/
+#prlx5{
+	position: fixed;
+	margin-top: 2700px;
+	width: 100%;
+	height: 300px;
+	background: rgba(163, 163, 255, 0.8);
+	padding-top: 50px;
+	color: white;
+	text-align: center;
+}
+#contact_ul{
+	display: block;
+	width: 650px;
+	margin: 0 auto;
+	list-style: none;
+	font-size: 20px;
+	text-align: center;
+}
+.contact_li{
+	display: block;
+	float: left;
+	padding-right: 25px;
+	padding-left: 25px;
+}
+#footer{
+	margin-top: 85px;
+}

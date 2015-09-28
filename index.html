@@ -1,1 +1,458 @@
-Hello World, I'm Jason
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jason Yoon</title>
+<link rel="shortcut icon" href="icons/sidearrow.png">
+<meta charset="utf-8">
+<link rel="stylesheet" type='text/css' href="bootstrap3.3.2/css/bootstrap.min.css" >
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="bootstrap3.3.2/js/bootstrap.min.js"></script>
+<!-- jQuery tabs -->
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="w2.css">
+<style>
+
+
+
+</style>
+
+<script>
+function parallax(){
+	if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))){
+		var prlx_background = document.getElementById('prlx_background');
+		prlx_background.style.top = -(window.pageYOffset/10) + 'px';
+	}
+}
+window.addEventListener("scroll", parallax, false);
+
+$(function() {
+  $('a[href*=#]:not([href=#]):not(.carousel-control):not(.tabs-tab)').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 50
+        }, 700);
+        return false;
+      }
+    }
+  });
+});
+
+$(function() {
+	$( "#tabs-min" ).tabs();
+ });
+</script>
+</head>
+
+<body>
+<div id='prlx_background'></div>
+
+<div class='nav_bar'>
+	<ul id='nav_bar_ul'>
+		<li><a class='nav_link' href="#contact">CONTACT</a></li>
+		<li><a class='nav_link' href="#interests">INTERESTS</a></li>
+		<li><a class='nav_link' href="#courseworks">COURSES</a></li>
+		<li><a class='nav_link' href="#projects">PROJECTS</a></li>
+		<li><a class='nav_link' href="#about-me">ABOUT ME</a></li>
+	</ul>
+	<a href="#splash"><img id='home_link' src='icons/home.png'></a>
+</div>
+
+
+
+<!-- SPLASH -->
+<div id='splash'>
+	<div id='face'><img width='130px' src='pics/profile1.png' alt='profile pic'></div>
+	<p style='padding-bottom:50px'>
+		<font size='6'>HI, I'M <b>JASON YOON</b></font><br>
+		<font size='4'>an aspring programmer based in Los Angeles, California, USA</font>
+	</p>
+	<a href='#about-me'><button class="invite_button" type="button" ><b>TAKE A LOOK AROUND!</b></button></a>
+	<img id='arrow' width='32px' src='icons/arrow.png'>
+	<div id='resume'>
+		<a href="data/RESUME.pdf" target="_blank">
+		<svg  class='circle' height="80" width="80">
+			<defs>
+			<pattern id="resume_icon" patternUnits="objectBoundingBox" width="32" height="32">
+			<image class='circle_img' xlink:href="icons/paper.png" x="15" y="15" width="40" height="40" />
+			</pattern>
+			</defs>
+			<circle cx="40" cy="40" r="35" stroke="white" stroke-width="5" fill="url(#resume_icon)" />
+		</svg>
+		</a>
+		<font size='4'>resume</font>
+	</div>
+</div>
+
+
+
+
+<!-- ABOUT ME -->
+<div id='about-me'>
+	<h1 class='middle'><b>A BIT ABOUT MYSELF</b></h1><br>
+	<div id='profile1'>
+		<svg class='circle' height="140" width="140">
+			<defs>
+			<pattern id="prof_img1" patternUnits="objectBoundingBox" width="32" height="32">
+			<image class='circle_img' xlink:href="icons/html-tag.png" x="15" y="15" width="90" height="90" />
+			</pattern>
+			</defs>
+			<circle cx="70" cy="70" r="60" stroke="#85E085" stroke-width="10" fill="url(#prof_img1)" />
+		</svg>
+		<div class='prof_content'>
+			<div class='prof_title'><font size='5'><b>PROGRAMMER</b></font></div>
+			<p>
+			Computer Science and Engineering undergraduate at UCLA<br><br>
+			Interested in database, web develeopment, Mathematics<br><br>
+			Familiar with C/C++, HTML, CSS, JavaScript, Linux, MIPS, x86<br><br>
+			Learning SQL, Java, Bash, Python, PHP<br>			
+			</p>
+		</div>
+	</div>
+	<div id='profile2'>
+		<svg class='circle' height="140" width="140">
+			<defs>
+			<pattern id="prof_img2" patternUnits="objectBoundingBox" width="32" height="32">
+			<image class='circle_img' xlink:href="icons/musicnote.png" x="20" y="20" width="70" height="70" />
+			</pattern>
+			</defs>
+			<circle cx="70" cy="70" r="60" stroke="#FFD633" stroke-width="10" fill="url(#prof_img2)" />
+		</svg>
+		<div class='prof_content'>
+			<div class='prof_title'><font size='5'><b>ARTIST</b></font></div>
+			<p>
+			Electric & acoustic guitar player<br><br>
+			Enjoys singing, improvising, making covers, and playing piano<br><br>
+			Interested in design and drawing<br><br>
+			Looking for band members<br>
+			</p>
+		</div>
+	</div>
+	<div id='profile3'>
+		<svg class='circle' height="140" width="140">
+			<defs>
+			<pattern id="prof_img3" patternUnits="objectBoundingBox" width="32" height="32">
+			<image class='circle_img' xlink:href="icons/questionmark.png" x="25" y="25" width="70" height="70" />
+			</pattern>
+			</defs>
+			<circle cx="70" cy="70" r="60" stroke="#8585E0" stroke-width="10" fill="url(#prof_img3)" />
+		</svg>
+		<div class='prof_content'>
+			<div class='prof_title'><font size='5'><b>JUST ME</b></font></div>
+			<p>
+			Loves food, pictures, and movies<br><br>
+			Plays basketball<br><br>
+			Speaks English, Korean, Japanese<br><br>
+			Enjoys going to concerts/performances
+			</p>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- PROJECTS -->
+<div id='projects'>
+	<h1 class='middle'><b>PROJECTS</b></h1><br>
+	<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false" style='overflow:hidden'>
+	  <ol class="carousel-indicators">
+		<li data-target="#carousel" data-slide-to="0" class="active"></li>
+		<li data-target="#carousel" data-slide-to="1"></li>
+		<li data-target="#carousel" data-slide-to="2"></li>
+		<li data-target="#carousel" data-slide-to="3"></li>
+		<li data-target="#carousel" data-slide-to="4"></li>
+	  </ol>
+
+	  <div class="carousel-inner" role="listbox">
+		<div class="item active">
+		  <img class='pull-left' src="pics/inkitchen.jpg" alt="inkitchen">
+		  <div class="carousel_caption" class='pull-right'>
+			<h3 class='middle'><b>In Kitchen</b> <a href='https://www.youtube.com/watch?v=_-RJS9btzd0' target="_blank"><img class='proj_link' src='icons/youtube.png'></a></h3>
+			<p class='middle'>Nov 2014</p>
+			<p>In Kitchen is a web application that helps you decide what to do 
+			with those leftover ingredients in your fridge. You can list
+			ingredients you have, and it will generate a list of dishes with
+			corresponding recipes that include specified ingredients. Each ingredient
+			you type in will turn into a red tag, which you can get rid of by simply
+			clicking the close button. When ready, click "find recipes!" to have a 
+			good meal and clean up your fridge. This was a 4-member team project at
+			HackSC '14, and I worked mostly on the UI, parsing inputs, and integrating
+			parsed output of server calls into HTML contents. 
+			</p>
+		  </div>
+		  <div class='project_metainfo'>
+			<p>
+			<b>Languages:</b> HTML, CSS, Javascript, JSON<br>
+			<b>Development Tools/APIs:</b> Yumly APIs, github, GIMP2, Notepad++<br>
+			</p>
+		  </div>
+		</div>
+
+		<div class="item">
+		  <img class='pull-left' src="pics/micromouse2.jpg" alt="micromouse">
+		  <div class="carousel_caption" class='pull-right'>
+			<h3 class='middle'><b>Micromouse</b> <a href='https://github.com/jasony0206/Micromouse' target="_blank"><img class='proj_link' src='icons/github.png'></a></h3>
+			<p class='middle'>Oct 2014 - present</p>
+			<p>Micromouse is an autonomous maze-solving robot competition. 
+			I am currently working with 3 other peers, and we are in charge of the
+			entire design and implementation process.
+			This mouse first explores the maze thoroughly, gathering information
+			about the walls by mainly utilizing IR sensors. Then, with the collected
+			information, it finds a shortest path to the center of the maze. 
+			On the hardware level, this involves designing the circuit, mounting and soldering
+			elements, and calibrating sensors. On the software level, we mainly focus on
+			optimizing data structures, bit-level optimization (MCU memory: 64KB), and implementing maze-solving algorithms.
+			</p>
+		  </div>
+		  <div class='project_metainfo'>
+			<p>
+			<b>Languages:</b> C++<br>
+			<b>Development Tools/APIs:</b> Arduino<br>
+			<b>Parts:</b> Teensy3.1 (Microprocessor), H-bridge, IR emitters, phototransistors, 
+			encoders, voltage regulator, perfboard, wheels/motors, batteries 
+			</p>
+		  </div>
+		</div>
+
+		<div class="item">
+		  <img class='pull-left' src="pics/website3.jpg" alt="portfolio website">
+		  <div class="carousel_caption" class='pull-right'>
+			<h3 class='middle'><b>Portfolio Website</b></h3>
+			<p class='middle'>Aug 2014 - present</p>
+			<p>Over the summer after my freshman year at UCLA, I created and hosted a
+			personal website for portfolio purpose while self-studying HTML, CSS,
+			JavaScript, jQuery, Bootstrap, etc. I built the entire website from scratch, and
+			as you can see, I am using it as a public platform to introduce myself and
+			share what I enjoy doing. Since August 2014, I have been constantly 
+			renovating this website to continue improving my web development skills.
+			</p>
+		  </div>
+		  <div class='project_metainfo'>
+			<p>
+			<b>Languages:</b> HTML, CSS, Javascript, jQuery<br>
+			<b>Development Tools/APIs:</b> github, Boostrap3, Notepad++ 
+			</p>
+		  </div>
+		</div>
+		
+		<div class="item">
+		  <img class='pull-left' src="pics/aria.jpg" alt="aria">
+		  <div class="carousel_caption" class='pull-right'>
+			<h3 class='middle'><b>Aria</b> <a href='https://www.youtube.com/watch?v=rE5l7GXkhsI' target="_blank"><img class='proj_link' src='icons/youtube.png'></a></h3>
+			<p class='middle'>Apr 2014</p>
+			<p>Aria is a mood-based soundboard web application. You can select a certian
+			mood, and Aria will play different soundtracks and display wallpapers accordingly.
+			It was inspired by rainmymood.com, and 
+			you can also write a short journal if you'd like, and let go of your worries
+			when you are done writing. This was the first web application I worked on, and was
+			built at LA Hacks '14 with 3 friends of mine. 
+			</p>
+		  </div>
+		  <div class='project_metainfo'>
+			<p>
+			<b>Languages:</b> HTML, CSS, Javascript<br>
+			<b>Development Tools/APIs:</b> github, Notepad++ 
+			</p>
+		  </div>
+		</div>
+
+		<div class="item">
+		  <img class='pull-left' src="pics/bugblast.jpg" alt="bugblast">
+		  <div class="carousel_caption" class='pull-right'>
+			<h3 class='middle'><b>BugBlast</b> <a href='https://www.youtube.com/watch?v=Bv4OlzKQNgc' target="_blank"><img class='proj_link' src='icons/youtube.png'></a></h3>
+			<p class='middle'>Feb 2014</p>
+			<p>BugBlast is a maze-based 2D video game. Player can place timer
+			bombs to destroy walls and defeat monsters present in the maze to proceed
+			to the next level with more challenging difficulty. This was a class project
+			in which specifications and basic framework for ticks and graphics were
+			provided. I first organized the class hierarchy following the principles of 
+			object-oriented programming, and implemented specifics of each class
+			incrementally from base classes to various derived classes, leveraging 
+			inheritance and supporting polymorphism. One of the monster classes had
+			a player-chasing attack mechanism, which I implemnted with a breadth-first
+			search based maze-solving algorithm. 
+			</p>
+		  </div>
+			<div class='project_metainfo'>
+			<p>
+			<b>Languages:</b> C++<br>
+			<b>Development Tools/APIs:</b> Visual Studio
+			</p>
+		  </div>
+		</div>
+	  </div>
+
+	  <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	  </a>
+	</div>
+</div>
+
+<!-- COURSEWORKS -->
+<div id='courseworks'>
+	<h1 class='middle'><b>COURSEWORKS</b></h1><br><br>
+	<div id='courses1'>
+		<p>
+		<b>COMPUTER SCIENCE</b>
+		<ul class='plain-list'>
+			<li>Algorithms and Complexity (in progress)</li>
+			<li>Database Systems (in progress)</li>
+			<li>Machine Learning (in progress)</li>
+			<li>Operating Systems Principles</li>
+			<li>Computer Systems Architecture</li>
+			<li>Logic Design of Digital Systems</li>
+			<li>Software Construction Laboratory</li>
+			<li>Introduction to Computer Organization</li>
+			<li>Introduction to Computer Science</li>
+		</ul>
+		</p>
+	</div>
+	<div id='courses2'>
+		<p>
+		<b>MATHEMATICS</b>
+		<ul class='plain-list'>
+			<li>Introduction to Probability (in progress)</li>
+			<li>Calculus of Several Variables</li>
+			<li>Linear Algebra and Applications</li>
+			<li>Differential Equations</li>
+			<li>Introduction to Discrete Structures</li>			
+		</ul>
+		</p>
+	</div>
+	<div id='courses3'>
+		<p>
+		<b>PHYSICS</b>
+		<ul class='plain-list'>
+			<li>Mechanics</li>
+			<li>Osicllations, Waves, Electric and Magenetic Fields</li>
+			<li>Electrodynamics, Optics, and Special Relativity</li>
+			<li>Mechanics Laboratory</li>
+			<li>Electricity and Magnetism Laboratory</li>
+		</ul>
+		</p>
+	</div>
+</div>
+
+
+<!-- INTERESTS -->
+<div id='interests'>
+	<h1 class='middle'><b>INTERESTS</b></h1>
+	<div id="tabs-min" class="tabs">
+		<ul>
+			<li><a href="#tabs-min-1" class='tabs-tab'>Guitar</a></li>
+			<li><a href="#tabs-min-2" class='tabs-tab'>Singing</a></li>
+			<li><a href="#tabs-min-3" class='tabs-tab'>Drawing</a></li>
+			<li><a href="#tabs-min-4" class='tabs-tab'>Basketball</a></li>
+			<li><a href="#tabs-min-5" class='tabs-tab'>Video Production</a></li>
+			<li><a href="#tabs-min-6" class='tabs-tab'>3D CAD</a></li>			
+		</ul>
+		
+		<div id="tabs-min-1">
+			<iframe class='pull-left framed-pic' width="450" height="338" src="https://www.youtube.com/embed/NyZKeKTazhE" frameborder="0" allowfullscreen></iframe>
+			<p>
+			I have been playing the guitar for 7 years. I first started learning electric
+			guitar in middle school so I could play Led Zeppelin songs, and now I enjoy 
+			playing both electric and acoustic guitars. I was in a band in high school 
+			with 4 friends of mine, and we usually played songs by bands like Radiohead, 
+			Muse, and Green Day as well as jamming in blues. I have not been as active
+			in college, but I still very much enjoy performing music with other people,
+			and I love playing snippets of songs I have been writing for fun. Some of
+			my favorite bands include Radiohead, the Beatles, Pink Floyd,
+			AC/DC, Guns 'N Roses, and Muse.
+			<br><br>If you are interested in watching more videos, feel free to drop
+			by my <a href='https://www.youtube.com/user/J0206Y/videos'><b>youtube channel</b></a>!
+			</p>
+		</div>
+		<div id="tabs-min-2">
+			<iframe class='pull-left framed-pic' width="450" height="253" src="https://www.youtube.com/embed/cqkzpwodxaQ" frameborder="0" allowfullscreen></iframe>
+			<p>
+			The first time I had fun singing was when I was practicing with my classmates
+			for a choir competition in middle school. After that, I started going to
+			karaoke with my friends pretty often. Since I started learning acoustic guitar,
+			my biggest hobby has been playing guitar and singing together. Many of my favorite
+			tunes to sing are by bands like Travis or Radiohead. I also enjoy writing
+			snippets of my own, so I have been working on a couple of songs for fun.
+			<br><br>If you are interested in watching more videos, feel free to drop
+			by my <a href='https://www.youtube.com/user/J0206Y/videos'><b>youtube channel</b></a>!			
+			</p>
+		</div>
+		<div id="tabs-min-3">
+			<img class='pull-left framed-pic' src='pics/leo.jpg' alt='lenoardo' height='400px' class='interest_pic'>
+			<p>
+			Drawing is probably the oldest hobby of mine. I used to attend an art school
+			as a little kid, and I spent a lot of time doodling dinosaurs with my dad. 
+			In elementary school, I was so into drawing that my friends and I played a little
+			game of ou r own based on characters and monsters that we drew. Back then, I
+			liked drawing creatures and monsters, and now I prefer drawing portraits or
+			objects. 
+			</p>
+		</div>
+		<div id="tabs-min-4">
+			<img width='300px'class='pull-left framed-pic' src='pics/basketball.jpg' alt='basketball'>
+			<p>
+			Basketball is my favorite sports. My older brother used to drag me out
+			to play with his friends, and I picked it up in middle school. 
+			I was in JV basketball in 9th grade, and I played pretty much everyday
+			throughout the rest of my high school career. I still enjoy playing 
+			pickup games!
+			</p>
+		</div>
+		<div id="tabs-min-5">
+			<iframe class='pull-left framed-pic' width="450" height="253" src="https://www.youtube.com/embed/L_suK1se8ec" frameborder="0" allowfullscreen></iframe>
+			<p>
+			Along with working with music, I like filming and editing videos too. 
+			I have worked on projects including a water-crisis PSA, colored pencil 
+			commercial, music video for a Beatles song (While My Guitar Gently Weeps),
+			and a documentary of student volunteers at a hospital. I learned basics
+			of cinematography and camera-directing, and this video is a water crisis
+			PSA I worked on with a friend of mine. All the footage and music are
+			work of our own. 
+			</p>
+		</div>
+		<div id="tabs-min-6">
+			<img width='450px'class='pull-left framed-pic' src='pics/cad.jpg' alt='cad'>
+			<p>
+			In high school, I took a class called Introduction to Engineering Design.
+			We learned a bit about basic principles of designing a physical system
+			(mostly mechanical), and spent quite a bit of time on learning CAD 
+			(Computer-aided Design). The year I took this class, I also won the first
+			place in PLTW 2012 Robots at Play CAD contest. This year, I am learning 
+			how to use 3D printer, and I use Autodesk, like in high school, to 
+			design parts. Currently, I am designing a raised platform for my Micromouse
+			so I can mount the wheels at a better height. 
+			</p>
+		</div>
+		
+	</div>
+</div> 
+
+ 
+<!-- CONTACT -->
+<div id='contact'>
+	<h1 class='middle'><b>CONTACT</b></h1><br>
+		<ul id='contact_ul' >
+			<li><a class='contact_li' href="#"><img src='icons/email.png'></a></li>	
+			<li><a class='contact_li' href="https://www.linkedin.com/in/jasonyoon" target="_blank"><img src='icons/linkedin.png'></a></li>	
+			<li><a class='contact_li' href="https://www.facebook.com/jason.yoon.10" target="_blank"><img src='icons/facebook.png'></a></li>
+			<li><a class='contact_li' href="https://github.com/jasony0206" target="_blank"><img src='icons/github.png'></a></li>
+			<li><a class='contact_li' href="https://www.youtube.com/user/J0206Y/videos" target="_blank"><img src='icons/youtube.png'></a></li>		
+		</ul>
+	<div id="footer"><font size='3'>jasony0206@gmail.com<br>Copyright &copy; 2015 Jason Sung Hyun Yoon</font></div>
+	
+</div>
+
+
+</body>
+</html>

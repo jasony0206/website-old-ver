@@ -1,0 +1,27 @@
+cs
+intro to CS I
+intro to CS II
+intro to computer organization
+software construction laboratory
+logic design of digital systems
+operating systems principles
+computer systems architecture
+machine learning
+database systems
+introduction to algorithms and complexity
+
+math
+calc of several variables
+linear algebra and applications
+differential equations
+introduction to discrete structures
+introduction to probability
+
+physics
+mechanics
+oscillations, waves, electric and magnetic fields
+electrodynamics, optics, and special relativity
+laboratory: mechanics
+laboratory: electricity and magnetism
+
+
