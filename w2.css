@@ -212,6 +212,18 @@ hr{
 	opacity: .65;
 }
 
+/* --------------------------EXPERIENCE-------------------------------*/
+#experience{
+	margin-top: 200px;
+	padding-bottom: 50px;
+	background: rgba(255, 255, 255, 1);
+	width: 100%;
+	padding-top: 40px;
+	display: block;
+	overflow: hidden;
+}
+
+
 /*------------------------------PROJECTS-----------------------------*/
 .carousel-inner > .item{
 	//width: auto;
